@@ -19,6 +19,21 @@ server.start();
 curl http://localhost:3000/render?url=https://www.example.com/
 ```
 
+## Running on docker
+
+Clone this repo.
+
+Install packages:
+```bash
+$ docker-compose run --rm app npm install
+```
+
+Build and start container:
+```bash
+$ docker-compose up -d
+```
+
+
 ## Use Cases
 The Prerender server can be used in conjunction with [our Prerender.io middleware](#middleware) in order to serve the prerendered HTML of your javascript website to search engines (Google, Bing, etc) and social networks (Facebook, Twitter, etc) for SEO. We run the Prerender server at scale for SEO needs at [https://prerender.io/](https://prerender.io/).
 
