@@ -46,7 +46,12 @@ RUN apt-get install -y \
 RUN npm install -g n
 RUN n stable
 
+# Chrome instalation
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN dpkg -i google-chrome*.deb
+RUN apt-get install -y ./google-chrome-stable_current_amd64.deb
+RUN rm google-chrome-stable_current_amd64.deb
 
- 
+# Check chrome version
+RUN echo "Chrome: " && google-chrome --version
+
+
